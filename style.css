@@ -1,0 +1,158 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1232px;
+  margin: 0 auto;
+}
+
+/* header */
+.header {
+  padding: 16px 24px;
+  border-bottom: 1px solid #EAECF0;
+  border-top: 1px solid #EAECF0;
+
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  display: flex;
+  gap: 40px;
+  font-weight: 500;
+  align-items: center;
+}
+.kurslar i {
+  transform: rotate(-90deg);
+  margin-left: 10px;
+  font-size: 13px;
+}
+.kurslar {
+  padding: 10px 16px;
+  cursor: pointer;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+}
+.navbar ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+.navbar ul li a {
+  padding: 10px 16px;
+  color: #BC8E5B;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all ease 0.5s;
+  position: relative;
+}
+.active:hover::after {
+  content: '';
+  position: absolute;
+  width: 75%;
+  height: 1px;
+  right: 17px;
+  bottom: 8px;
+  background-color: #BC8E5B;
+}
+.online::after {
+  content: '';
+  position: absolute;
+  width: 74%;
+  height: 1px;
+  right: 17px;
+  bottom: 8px;
+  background-color: #BC8E5B;
+}
+.blog::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  right: 17px;
+  bottom: 8px;
+  background-color: #BC8E5B;
+}
+.phone {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 16px;
+  border: 1px solid #BC8E5B;
+  border-radius: 10px;
+  color: #BC8E5B;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.phone span {
+  position: relative;
+}
+.phone span:hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  background-color: #BC8E5B;
+}
+.md_img {
+  display: none;
+}
+.md_kurslar {
+  display: none;
+}
+.menu_bar {
+  display: none;
+}
+
+
+@media (max-width: 900px) {
+  .lg_kurslar {
+    display: none;
+  }
+  .md_kurslar {
+    display: block;
+    cursor: pointer;
+  }
+  .navbar {
+    display: none;
+  }
+  .lg_img {
+    display: none;
+  }
+  .md_img {
+    display: block;
+  }
+  .menu_bar {
+    display: block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #555;
+    transition: all ease 0.4s;
+    cursor: pointer;
+  }
+  .menu_bar i {
+    font-size: 18px;
+  }
+  .menu_bar:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+}
